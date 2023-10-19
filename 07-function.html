@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> functions</title>
+
+  </head>
+  <body>
+    <script>
+      /* what is a funtion.
+      A function lets us to reuse code.
+      Rules for fuction, or syntax.
+      function is define by word function and then given a name.
+      same rules applies as variables.
+      1-cann't use special words example fuction
+      2-cann't start with a number.
+      3- we cann't use special charactors.
+      except: $ and _ are allowed.
+      Best practice =useCamelCase
+      inside the {} the code is called fuction body.
+      the code only creates a function. it doesn't run the coe inside.
+      functionname(); is calling the funtion or running the fuction or excecuting the function.
+
+      */
+     
+     /* function function1(){
+      console.log('hello');
+      console.log(2+2);
+     }
+     function1(); 
+     */
+    
+      /* paramters are opposite of a return statement.
+      Return=gets a value out of a function.
+      Parameter= Puts a value into a fuction.
+      A parameter works the same way as a variable.
+
+      Syntax Rules for Parameter....
+      1- Cann't use specail words example: function.
+      2- Cann't start with a number.
+      3- Cann't use special character except: $ _
+      4- Best practice is to use camelCase.
+
+      A parameter only exists inside the function scope. A function can have more than one parameter.
+      Default value: Second function is using a default value as only one value 5000 is passed in function.
+      */
+      function calculateTax(cost,  taxPercent = 0.1){
+      console.log(cost *  taxPercent);
+     }
+     calculateTax(2000, 0.2);
+     calculateTax(5000);
+     
+     
+    </script>
+  </body>
+</html>

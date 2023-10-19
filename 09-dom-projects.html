@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM Projects</title>
+  </head>
+  <body>
+    <p>youTube Subscribe Button</p>
+    <button onclick="
+    subscribe();
+    "class="js-subscribe-button">Subscribe</button>
+    <p >Amazon Shipping Calculator.</p>
+    <input placeholder="Cost of Order" class ="js-cost-input" onkeydown="handleCostKeydown()";>
+    <button onclick="
+    calculateTotal();
+    ">calculate</button>
+    <p class="js-total-cost"></p>
+    
+    
+    <script>
+      
+      
+      window.console.log('window');
+      
+
+
+      function subscribe(){
+      const buttonElement = document.querySelector('.js-subscribe-button');
+      if(buttonElement.innerText === 'Subscribe' ){
+        buttonElement.innerHTML='Subscribed';
+      }else{
+        buttonElement.innerHTML='Subscribe';
+        }
+      }
+      function calculateTotal(){
+      const inputElement = document.querySelector('.js-cost-input');
+      let cost = Number(inputElement.value);
+      console.log(typeof cost);
+      if(cost<40){
+        cost = cost + 10;
+        console.log(cost);
+      }
+      document.querySelector('.js-total-cost').innerHTML = `$${cost}`;
+      }
+      function handleCostKeydown(event){
+      if(event.key === 'Enter'){
+      calculateTotal();
+    }
+    }
+     /*
+     Window Object:
+     Document object represents the webpage, whereas windows object represents the browser e.g
+      window.document
+      window.console.log('window');
+      window.alert
+      for short cut we don't have to type "window." in the beginning. javaScript will automatically add it. winddow is a built in object.
+
+     Steps for Shipping calculator
+     1- Get the text in the text box.
+     2-if ammount < $40, Add $10 on ammount for shipping.
+     3-display the total on the page.
+     
+     Event Listeners
+     onclick = click
+     onkeydown = key press
+     onscroll = scrolling
+     onmouseenter = hovering over
+     onmouseleave = stop hovering over
+     and many more.
+
+     Note = Every event listener gets an event object;
+
+     */
+    /* process for JavaScript
+
+    https://www.supersimple.dev/projects/dom/
+
+    1. Figure out what steps we need(algorithm
+    2.Convert these steps into code.)
+    steps
+    when we click the button,
+    1.if the text is 'Subscribe'=>"Subscribed"
+    2.otherwise change it back =>"Subscribe."
+    */
+       </script>
+  </body>
+</html>

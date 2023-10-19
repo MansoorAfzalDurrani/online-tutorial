@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Objects</title>
+  </head>
+  <body>
+    <script>
+      /*
+       An object let us group multiple values together.
+       the code on the left of values is called property e.g name and price. and using the property we can access the specific value in th object.
+       example below all explains how ojbect are access,created and delete.
+       Objects
+       -let us group multiple values together.
+       -let us use multiple values together.
+       why we us objects.
+       -make our code more organized.
+       supersimple.dev/projects/objects.
+
+       How to access the values in objects.
+       1- one way is with dot notation. e.g. console.log(product.name);
+       2- 2nd way is console.log(product2['name']);
+       Bracket Notation
+       -lets us use properties that don't work with dot notation. e.g console.log(product2.delivery-time);
+       - gives us an error as javascript considers this a minus maths operation.
+       Right way will be console.log(product2['deliver-time']);
+       in [] or sqare brackets not only string can be used but we can also use a variable, a calculation or anything that results in a value.
+
+       while at the time of declaration of object
+       ['delivery-time']: 1 day; these brackets are optional.
+
+       Nested object an object inside an object. To access 
+       objects and value we have to use dot notations multiple time.
+
+       Another type of value we can put in an object is a function. and it works as function is another type of value. Fuction isside an object is called Method.
+       console.log is a Method where console is an object and log is a function.
+
+       What is a Built-in Objects
+       math.calculation or console.log are built-in ojbects as they are prvided by the language.
+
+       2More built-in objects are JSON and localStorage.
+       jSON Built-in object
+       -helps us work with JSON(JavaScript Object Notaion).
+       -a syntax
+       -similar to javeScript object but has less features.
+       In jSON, Jason doen't support simgle quotes. it always uses dobuble quote "";
+       JASON doesn't support functions.
+
+       why do we used JSON systax. because JavaScript object only makes sense is javaScipt  whereas JSON syntax can be understand by almost every programming language. JSON syntax is more universal.
+
+       we use JSON WHEN WE SEND data between computers. and also when we store data.
+
+       JSON.stringify(product2);
+
+       Convert:
+       -JSON back to javaScript Object.
+       JSON.parse();
+
+       NEXT built-in object
+       localStorage
+       -save values more permanently. and doesn't get deleted when we refresh the page whereas..
+      note variables are temporary store data. if we refresh or close th page, all the variables are deleted.
+      localStrong only saves the string.
+      localStrong.setItem('message','hello');
+      localStorage.getItem('message');
+
+      Let us learn more about objects.
+      null vs undefined
+      null = intentionally want something to be empty.
+      in most cases null and undefind works the same.
+
+      Auto Boxing.
+      JavaScript has a special feature called auto boxing.
+      where string can be wrap in a special object. and this object has the property length and the method.
+      console.log('hello'.length);
+      console.log('hello'.toUpperCase());
+      3.0.toString();
+      true.toString();
+
+      Objects are references
+      javaScript copies the reference to other object which is more efficient and faster instead of coping whole big objects in memory over and over again.
+      e.g
+      const object1 = {
+      message: 'hello'
+     };
+     const object2 = object;
+     this is called copy by reference.
+
+     intereting behavior of refences.
+
+     const object1 = {
+      message: 'hello'
+    };
+    const object2 = object1;
+
+    object1.message = 'Good job';
+
+    console.log(object1);
+
+    we changed the value of object1 to good job even though it is declared as const becuase const declars the referece to object as const. we can still change the value of object.
+
+    last interesting behavior is that we cann't compare objects directly.
+    e.g.
+    const object3 = {
+      message: 'Good job'
+    };
+    console.log(object3 === object1);
+    the answer is false eventhough the values are same because remember objects are references and this upper code compare the references not the value inside.
+    console.log(object2 === object1);
+    answer is true. now we comparing the references.
+
+    shortcuts for objects.
+
+    Destructing: 
+    -easier way to take properties out of an object.
+    
+   const object4 = {
+      message: 'Good job',
+      price: 1.99
+    };
+    1-const  message = object4.message;
+    2-const {message} = object4;
+
+    this will take the message property out of object4 and save it in a variable called message. upper line 2 is a shortcut for line 1.
+
+    SHorthand property.
+
+    const object5 = {
+    //message: message
+    message
+    };
+    console.log(object5);
+    world message does the same job of message: message
+
+    Shorthand method property
+
+     //method: function function1(){
+    //console.log('method');
+    //},
+    method(){
+      console.log('method');
+    }
+
+      */
+
+
+     
+     /*const product={
+        name: 'socks',
+        price: 1000
+      };
+      console.log(product);
+
+      console.log(product.name);
+      console.log(product.price);
+
+      product.name='cotton socks';
+      console.log(product.name);
+
+      product.newProperty = true;
+      console.log(product.newProperty);
+
+      delete product.newProperty;
+      console.log(product.newProperty);
+      */
+     const product2 = {
+      name: 'shirt',
+      ['delievery-time'] : '1 day',
+      rating:{
+        stars :4.5,
+        count: 87,
+      },
+    
+     fun: function fuction1(){
+    console.log('function inside an object.')
+    }
+      
+    }
+    /*
+     console.log(product2);
+     console.log(product2.name);
+     console.log(product2['name']);
+     console.log(product2.rating.stars);
+     product2.fun();
+
+     console.log(JSON.stringify(product2));
+
+     const javaString = JSON.stringify(product2);
+     console.log(JSON.parse(javaString));
+     */
+    console.log('hello'.length);
+    console.log('hello'.toUpperCase());
+
+    const object1 = {
+      message: 'hello'
+    };
+    const object2 = object1;
+
+    object1.message = 'Good job';
+    console.log(object1);
+    console.log(object2);
+
+    const object3 = {
+      message: 'Good job'
+    };
+   console.log(object3 === object1);
+
+   const object4 = {
+      message: 'Good job done'
+    };
+   // const  message = object4.message;
+    const {message} = object4;
+    console.log(message);
+
+    const object5 = {
+    //message: message
+    message,
+    //method: function function1(){
+    //console.log('method');
+    //},
+    method(){
+      console.log('method');
+    }
+    };
+    console.log(object5);
+    object5.method();
+
+
+
+    </script>
+  </body>
+  
+</html>

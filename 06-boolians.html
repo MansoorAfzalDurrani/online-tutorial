@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Booleans and if Statments
+    </title>
+  </head>
+  <body>
+    <script>
+      /*
+      true
+      console.log(typeof true);
+      false
+
+      console.log(3<5);
+
+      console.log(5  =='5.00' );
+
+     console.log('if statement execuation');
+      if(false){
+        console.log('hello');
+      }else{
+        console.log('else');
+      }
+ 
+      console.log('Nested if statement excecution result');
+      let age=30;
+      const minimumDrivingAge=16;
+      if( age >= minimumDrivingAge){
+        console.log('you can drive');
+      } else if(age>=14){
+        console.log('Almost there');
+      }else{
+        console.log('you cannot drive');
+      }
+
+      console.log('Boolean Operator And Operatot &&');
+      console.log(true&&true);
+      console.log(true&&false);
+      console.log(false&&ue);
+      console.log(false&&false);
+
+      console.log('Boolean Operator OR Operatot ||');
+      console.log(true||true);
+      console.log(true||false);
+      console.log(false||true);
+      console.log(false||false);
+
+      console.log('Boolean Operator Not Operatot !');
+      console.log(!true);
+      console.log(!false); */
+
+      /* details about Booleans and if-statement.
+       Truthy and falsy Values.
+       they can work with any type of values like numbers and strings.
+       falsy values list
+       false 0 '' NaN(Not A Number) null
+       NaN used for math wrong operations like 'string'/5
+       undefined something does not have a value.
+       undefined only used with syntax let, we cann't used 
+       with conts if we really have to used with conts 
+       we have to specify undefined e.g.
+       conts a=undefined.
+
+      */
+     if (5){
+      console.log('truthy');
+     }
+     // this statment will not excecute because it behave like a false
+
+     if(0){
+      console.log('falsly.');
+     }
+     //NaN example
+     console.log('text'/5);
+     // undefind example
+     let avar;
+     console.log(avar);
+      
+     /* shortcuts for if-statements.
+      -Ternary operator ?:
+      -Guard Operator &&
+      -default operator ||
+     */
+     // Ternary Operator this is simplar to if else statement. if(true){'truthly'} else('falsy') but below example is shortcut.
+     const result = true?'truthy':'falsey'
+     console.log(result);
+     const result1 = 0 ?'truthy':'falsey'
+     console.log(result1);
+     // Next Short Cut is called Guard operator.
+     /*
+     AND operator &&
+      true && true bothside should be true to operate
+      false && true (short-Circuit evaluation)
+      stops early and doesn't excecute second part of && operator shortcut for 
+      if(condition) {console.log('hello')};
+     */
+    // example
+    false && console.log('hello');
+
+    const message = false && 'hello';
+    console.log(message);
+    const message1 = 5 && 'hello';
+    console.log(message1);
+
+    /* OR Operator
+     value1 || value2
+    true   || .......
+    OR operator also stops early or short-circuits. if the first value is truely.
+    */
+
+    const currency = 'EUR' || 'USD';
+    console.log(currency);
+
+    const currencyExample = undefined || 'USD';
+    console.log(currencyExample);
+
+
+
+    </script>
+  </body>
+</html>

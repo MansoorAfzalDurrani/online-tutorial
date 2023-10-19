@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> To Do List</title>
+<link rel="stylesheet" href="styles/11-todo-list.css">
+</head>
+<body>
+<P> To Do List Practice 1</P>
+<div class="todo-input-grid">
+  
+<input placeholder="ToDo Name"
+class ="js-name-input name-input">
+
+<input type="date" 
+class="js-due-date-input due-date-input">
+
+<button onclick="addToDo();
+" class="add-todo-button">Add</button>
+</div>
+
+<div class = "js-todo-list todo-grid"></div>
+
+<script >
+//src="scripts/11-todo-list.js"
+
+
+
+const todoList = [
+{
+name:'Make dinner',
+dueDate: '2022-12-23'},
+{
+name:'Wash Dishes',
+dueDate: '2022-12-22'
+},
+{
+name:'cook food',
+dueDate: '2022-12-22'
+}
+
+]; 
+
+rendertodoList();
+
+function rendertodoList(){
+let todoListHTML =``;
+  let i;
+for(  i=0; i<todoList.length;i++){
+  const todoObject =todoList[i];
+  const name = todoObject.name;
+  const dueDate=todoObject.dueDate;
+  const html =`
+      <div>${name}</div>
+      <div>${dueDate} </div> 
+    <button onclick="
+    console.log(' delte pressed');
+    todoList.splice(${i},1);
+    rendertodoList();
+    " class = "delete-todo-button"> Delete </button>
+  `;
+  todoListHTML +=  html;
+}
+
+console.log(todoListHTML);
+document.querySelector('.js-todo-list')
+.innerHTML = todoListHTML;
+}
+
+function addToDo(){
+
+const inputElement=document.querySelector('.js-name-input');
+const name =inputElement.value;
+
+const dateInputElement = document.querySelector('.js-due-date-input');
+const dueDate = dateInputElement.value;
+
+todoList.push({
+//name: name, 
+//dueDate: dueDate
+//we used Shordhand property syntax, commment and below lines do the same funciton
+name,
+dueDate 
+});
+
+// console.log(todoList);
+
+inputElement.value = '';
+dateInputElement.value = '';
+rendertodoList();
+}
+
+
+
+// });
+</script>   
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document Ojbect Model</title>
+  </head>
+  <body>
+    
+    <button>
+         hello
+    </button>
+    <button class="js-button">
+      Second button
+    </button>
+    <script>
+    
+    console.log(document.querySelector('button').innerHTML);
+    document.querySelector('button')
+      .innerHTML ='Changed by querySelector Methond.';
+    console.log(document.querySelector('.js-button'));
+
+   /* console.log(document.title);
+    document.title = 'Changed';
+
+    console.log(document.body);
+    console.log(typeof document.body);
+
+    console.log(document.body.innerHTML);
+    //document.body.innerHTML = 'Changed';
+    document.body.innerHTML = '<button>good job InnerHTML</button>'; */
+
+    /*
+      document.body.innerHTML = 'HELLO';
+      document.title = 'Good Job!';
+      */
+      /* DOM(Document Object Model)
+      objects which group multiple values togather, we learnt about built in objects which are provided by javascript.e.g. console,math,JSON,localStorage
+      DOM is another built-in object.
+      Syntax Rules For the DOM!
+      its a built in object ans works the same way any other object. it contains properties like body and title  that we can access using dot notation. special think about the  object is, its link with the webpage.
+      in adition to this it also has methods.
+      we can have HTML elements inside javeScript and it gives the javeScript the control of the element.
+
+      -note Method is a fucntion saved inside an object.
+      e.g. document.querySelector('Button');
+      -let us get any element from the page and put it inside javaScript.
+      button is the element selected in this case.
+      Every HTML element has a property .innerHTML. which let us control inside the element. And this allows us to only change the parts of the page that we need.
+      What if we have 2 buttons. and how do we select the second button. we do this via class="" attribut.
+      console.log(document.querySelector('.js-button'));
+      In upper example .js-button is class attibute instead of element which gives us accesss to any specific element. when we start with . it is called a class selector.
+      HTML elements are javaScript objects.
+      DOM combines javaScript and HTML together.it gieves JS full control of  the webpage.
+
+      www.supersimple.dev/projects/dom
+
+
+      */
+
+    </script>
+  </body>
+</html>
